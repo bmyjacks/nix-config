@@ -8,6 +8,7 @@
     ./git
     ./gnome
     ./gpg
+    ./kde
     ./locale
     ./localsend
     ./systemd-boot

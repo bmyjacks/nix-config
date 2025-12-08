@@ -31,8 +31,9 @@
       firefox.enable = true;
       fonts.enable = true;
       git.enable = true;
-      gnome.enable = true;
+      gnome.enable = false;
       gpg.enable = true;
+      kde.enable = true;
       locale.enable = true;
       localsend.enable = true;
       systemd-boot.enable = true;
