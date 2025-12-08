@@ -12,6 +12,6 @@ in
   options.custom.${featureName}.enable = lib.mkEnableOption "Enable ${featureName}";
 
   config = lib.mkIf cfg.enable {
-    programs.localsend.enable
+    programs.localsend.enable = true;
   };
 }
