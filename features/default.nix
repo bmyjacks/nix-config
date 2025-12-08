@@ -8,6 +8,7 @@
     ./git
     ./gnome
     ./gpg
+    ./hyprland
     ./kde
     ./locale
     ./localsend
