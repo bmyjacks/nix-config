@@ -32,6 +32,7 @@ in
         home.packages = with pkgs; [
           nixfmt-rfc-style
           nixd
+          bitwarden-desktop
         ];
       };
     };
