@@ -39,7 +39,7 @@ in
       };
       services.gpg-agent = {
         enable = true;
-        pinentry.package = pkgs.pinentry-gnome3;
+        pinentry.package = pkgs.pinentry-qt;
       };
 
       # Make git to sign by default

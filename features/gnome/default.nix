@@ -27,5 +27,9 @@
       papirus-icon-theme
       bibata-cursors
     ];
+
+    # Disable some services
+    services.gnome.localsearch.enable = false;
+    services.gnome.tinysparql.enable = false;
   };
 }

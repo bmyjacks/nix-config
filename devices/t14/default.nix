@@ -31,7 +31,6 @@
       firefox.enable = true;
       fonts.enable = true;
       git.enable = true;
-      gnome.enable = false;
       gpg.enable = true;
       kde.enable = true;
       locale.enable = true;
