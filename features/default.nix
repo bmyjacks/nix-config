@@ -9,6 +9,7 @@
     ./gnome
     ./gpg
     ./locale
+    ./localsend
     ./systemd-boot
     ./tailscale
     ./tmpUseTmpfs

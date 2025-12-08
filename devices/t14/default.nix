@@ -34,6 +34,7 @@
       gnome.enable = true;
       gpg.enable = true;
       locale.enable = true;
+      localsend.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
       tmpUseTmpfs.enable = true;
