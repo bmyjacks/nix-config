@@ -23,7 +23,7 @@ in
     # Essential "Mouseless" tools
     environment.systemPackages = with pkgs; [
       # Launcher (replace your start menu)
-      rofi-wayland # or wofi, fuzzel
+      rofi # or wofi, fuzzel
 
       # Terminal (fast, keyboard centric)
       kitty # or alacritty, foot
