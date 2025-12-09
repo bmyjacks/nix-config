@@ -4,21 +4,31 @@
   pkgs,
   ...
 }:
-{
-  options.custom.gnome.enable = lib.mkEnableOption "Enable GNOME";
+let
+  featureName = "gnome";
 
-  config = lib.mkIf config.custom.gnome.enable {
+  cfg = config.custom.${featureName};
+in
+{
+  options.custom.${featureName}.enable = lib.mkEnableOption "Enable ${featureName}";
+
+  config = lib.mkIf cfg.enable {
     # Enable gdm and gnome pkg
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
 
     # Enable needed apps
-    services.gnome.core-apps.enable = true;
+    services.gnome = {
+      core-apps.enable = true;
+      localsearch.enable = false;
+      tinysparql.enable = false;
+    };
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
       gnome-user-docs
       epiphany # Web
       seahorse # Key manager
+      geary # Mail client
     ];
 
     # Add some useful pkgs
@@ -27,9 +37,5 @@
       papirus-icon-theme
       bibata-cursors
     ];
-
-    # Disable some services
-    services.gnome.localsearch.enable = false;
-    services.gnome.tinysparql.enable = false;
   };
 }
