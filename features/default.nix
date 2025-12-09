@@ -27,6 +27,8 @@
       "flakes"
     ];
 
+    nix.settings.download-buffer-size = 524288000;
+
     # Enable unfree
     nixpkgs.config.allowUnfree = true;
   };
