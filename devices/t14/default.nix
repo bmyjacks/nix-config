@@ -32,7 +32,7 @@
       fonts.enable = true;
       git.enable = true;
       gpg.enable = true;
-      hyprland.enable = true;
+      gnome.enable = true;
       locale.enable = true;
       localsend.enable = true;
       systemd-boot.enable = true;
