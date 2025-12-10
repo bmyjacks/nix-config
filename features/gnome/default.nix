@@ -19,9 +19,6 @@ in
 
     # Enable needed apps
     services.gnome = {
-      core-apps.enable = true;
-      localsearch.enable = false;
-      tinysparql.enable = false;
     };
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
@@ -33,6 +30,7 @@ in
 
     # Add some useful pkgs
     environment.systemPackages = with pkgs; [
+      gnome-console
       gnome-tweaks
       papirus-icon-theme
       bibata-cursors
