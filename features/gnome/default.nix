@@ -19,13 +19,13 @@ in
 
     # Enable needed apps
     services.gnome = {
+      core-apps.enable = false;
+      localsearch.enable = false;
+      tinysparql.enable = false;
     };
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
       gnome-user-docs
-      epiphany # Web
-      seahorse # Key manager
-      geary # Mail client
     ];
 
     # Add some useful pkgs
