@@ -10,7 +10,8 @@
 
   config = lib.mkIf config.custom.fonts.enable {
     fonts.packages = with pkgs; [
-      maple-mono.NF-CN
+      inter # UI
+      maple-mono.NF-CN # monospace
     ];
   };
 }
