@@ -22,6 +22,7 @@ in
       core-apps.enable = false;
       localsearch.enable = false;
       tinysparql.enable = false;
+      gnome-keyring.enable = lib.mkForce false;
     };
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
