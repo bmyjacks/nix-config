@@ -12,6 +12,7 @@
     ./kde
     ./locale
     ./localsend
+    ./ssh
     ./systemd-boot
     ./tailscale
     ./tmpUseTmpfs
