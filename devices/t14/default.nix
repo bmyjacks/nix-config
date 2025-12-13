@@ -32,7 +32,7 @@
       fonts.enable = true;
       git.enable = true;
       gpg.enable = true;
-      gnome.enable = true;
+      hyprland.enable = true;
       locale.enable = true;
       localsend.enable = true;
       ssh-client.enable = true;
