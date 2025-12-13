@@ -14,11 +14,13 @@ in
   config = lib.mkIf config.custom.git.enable {
     home-manager.users.${username}.programs.git = {
       enable = true;
-      settings.user = {
-        name = "${fullname}";
-        email = "${email}";
+      settings = {
+        init.defaultBranch = "master";
+        user = {
+          name = "${fullname}";
+          email = "${email}";
+        };
       };
-      extraConfig.init.defaultBranch = "master";
     };
   };
 }
