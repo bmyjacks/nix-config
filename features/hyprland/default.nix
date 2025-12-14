@@ -16,10 +16,13 @@ in
   imports = [
     ./ly.nix
     ./greetd.nix
+    ./hyprpanel.nix
   ];
 
   config = lib.mkIf cfg.enable {
     custom.greetd.enable = true;
+    custom.hyprpanel.enable = true;
+
     # Enable Hyprland
     programs.hyprland = {
       enable = true;
