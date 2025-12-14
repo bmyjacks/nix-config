@@ -20,6 +20,7 @@ in
       settings = {
         animation = "matrix";
         battery_id = "BAT0";
+        clear_password = true;
       };
     };
   };
