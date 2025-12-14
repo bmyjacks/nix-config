@@ -15,12 +15,11 @@ in
 
   imports = [
     ./ly.nix
+    ./greetd.nix
   ];
 
   config = lib.mkIf cfg.enable {
-    # Enable ly
-    custom.options.ly.enable = true;
-
+    custom.greetd.enable = true;
     # Enable Hyprland
     programs.hyprland = {
       enable = true;
