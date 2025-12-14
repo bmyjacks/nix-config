@@ -14,8 +14,8 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.ssh = {
-      enableAskPassword = true;
-      startAgent = true;
+      # enableAskPassword = true;
+      # startAgent = true;
     };
 
     environment.systemPackages = with pkgs; [
