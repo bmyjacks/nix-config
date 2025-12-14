@@ -13,13 +13,14 @@ in
   options.custom.${featureName}.enable = lib.mkEnableOption "Enable ${featureName}";
 
   config = lib.mkIf cfg.enable {
-    programs.ssh = {
-      # enableAskPassword = true;
-      # startAgent = true;
-    };
-
     environment.systemPackages = with pkgs; [
+      ssh-askpass-fullscreen
       libfido2
     ];
+
+    programs.ssh = {
+      enableAskPassword = true;
+      askPassword = "${pkgs.ssh-askpass-fullscreen}/bin/ssh-askpass-fullscreen";
+    };
   };
 }
