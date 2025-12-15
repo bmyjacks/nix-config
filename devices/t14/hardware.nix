@@ -26,31 +26,59 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "zpool/root";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-  };
-
-  fileSystems."/nix" = {
-    device = "zpool/nix";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-  };
-
-  fileSystems."/var" = {
-    device = "zpool/var";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
+    device = "/dev/disk/by-uuid/066efb49-3aa4-41e1-85ae-eff9be2bdba5";
+    fsType = "btrfs";
+    options = [
+      "subvol=@"
+      "compress-force=zstd:1"
+      "noatime"
+      "space_cache=v2"
+      "discard=async"
+      "ssd"
+    ];
   };
 
   fileSystems."/home" = {
-    device = "zpool/home";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
+    device = "/dev/disk/by-uuid/066efb49-3aa4-41e1-85ae-eff9be2bdba5";
+    fsType = "btrfs";
+    options = [
+      "subvol=@home"
+      "compress-force=zstd:1"
+      "noatime"
+      "space_cache=v2"
+      "discard=async"
+      "ssd"
+    ];
+  };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/066efb49-3aa4-41e1-85ae-eff9be2bdba5";
+    fsType = "btrfs";
+    options = [
+      "subvol=@nix"
+      "compress-force=zstd:1"
+      "noatime"
+      "space_cache=v2"
+      "discard=async"
+      "ssd"
+    ];
+  };
+
+  fileSystems."/var" = {
+    device = "/dev/disk/by-uuid/066efb49-3aa4-41e1-85ae-eff9be2bdba5";
+    fsType = "btrfs";
+    options = [
+      "subvol=@var"
+      "compress-force=zstd:1"
+      "noatime"
+      "space_cache=v2"
+      "discard=async"
+      "ssd"
+    ];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-id/nvme-KBG50ZNV256G_KIOXIA_62HPG1W4QXQ5-part1";
+    device = "/dev/disk/by-uuid/0CA2-4CE2";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -59,10 +87,6 @@
   };
 
   swapDevices = [ ];
-
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
