@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./chrome
     ./chrony
     ./firefox
     ./fonts
