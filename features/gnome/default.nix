@@ -31,6 +31,7 @@ in
     # Add some useful pkgs
     environment.systemPackages = with pkgs; [
       gnome-console
+      nautilus
       gnome-tweaks
       papirus-icon-theme
       bibata-cursors
