@@ -13,6 +13,7 @@
     ./kde
     ./locale
     ./localsend
+    ./neovim
     ./ssh
     ./systemd-boot
     ./tailscale

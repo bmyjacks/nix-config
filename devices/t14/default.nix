@@ -35,6 +35,7 @@
       gnome.enable = true;
       locale.enable = true;
       localsend.enable = true;
+      neovim.enable = true;
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
