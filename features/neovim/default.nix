@@ -16,6 +16,7 @@ in
   config = lib.mkIf cfg.enable {
     home-manager.users.${username}.programs.neovim = {
       enable = true;
+      defaultEditor = true;
     };
   };
 }
