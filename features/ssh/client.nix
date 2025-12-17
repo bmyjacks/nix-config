@@ -21,6 +21,9 @@ in
     programs.ssh = {
       enableAskPassword = true;
       askPassword = "${pkgs.ssh-askpass-fullscreen}/bin/ssh-askpass-fullscreen";
+      startAgent = true;
     };
+
+    services.gnome.gcr-ssh-agent.enable = false;
   };
 }
