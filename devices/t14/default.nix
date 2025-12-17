@@ -28,6 +28,7 @@
 
       # Enable features
       chrony.enable = true;
+      devenvir.enable = true;
       firefox.enable = true;
       fonts.enable = true;
       git.enable = true;
@@ -35,7 +36,6 @@
       gnome.enable = true;
       locale.enable = true;
       localsend.enable = true;
-      neovim.enable = true;
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
