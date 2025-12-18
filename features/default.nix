@@ -4,6 +4,7 @@
   imports = [
     ./chrome
     ./chrony
+    ./cosmic
     ./devenvir
     ./firefox
     ./fonts

@@ -28,12 +28,13 @@
 
       # Enable features
       chrony.enable = true;
+      cosmic.enable = true;
       devenvir.enable = true;
       firefox.enable = true;
       fonts.enable = true;
       git.enable = true;
       gpg.enable = true;
-      gnome.enable = true;
+      # gnome.enable = true;
       locale.enable = true;
       localsend.enable = true;
       ssh-client.enable = true;
