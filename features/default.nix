@@ -19,6 +19,7 @@
     ./ssh
     ./systemd-boot
     ./tailscale
+    ./tlp
     ./tmpUseTmpfs
     ./vscode
     ./zram

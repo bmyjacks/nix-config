@@ -34,12 +34,12 @@
       fonts.enable = true;
       git.enable = true;
       gpg.enable = true;
-      # gnome.enable = true;
       locale.enable = true;
       localsend.enable = true;
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
+      tlp.enable = true;
       tmpUseTmpfs.enable = true;
       vscode.enable = true;
       zram.enable = true;
