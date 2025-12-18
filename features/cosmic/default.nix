@@ -14,10 +14,11 @@ in
   options.custom.${featureName}.enable = lib.mkEnableOption "Enable ${featureName}";
 
   config = lib.mkIf cfg.enable {
-    # Enable the COSMIC login manager
-    services.displayManager.cosmic-greeter.enable = true;
+    services = {
+      displayManager.cosmic-greeter.enable = true;
+      desktopManager.cosmic.enable = true;
 
-    # Enable the COSMIC desktop environment
-    services.desktopManager.cosmic.enable = true;
+      system76-scheduler.enable = true;
+    };
   };
 }
