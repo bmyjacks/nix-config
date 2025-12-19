@@ -13,13 +13,31 @@ in
   config = lib.mkIf config.custom.vscode.enable {
     home-manager.users.${username}.programs.vscode = {
       enable = true;
-      profiles.default.extensions = with pkgs.vscode-extensions; [
-        jnoortheen.nix-ide
-        pkief.material-icon-theme
-        usernamehw.errorlens
-        christian-kohler.path-intellisense
-        zhuangtongfa.material-theme
-      ];
+      profiles.default = {
+        # Disable update
+        enableUpdateCheck = false;
+        enableExtensionUpdateCheck = false;
+
+        # Enable some useful extensions
+        extensions = with pkgs.vscode-extensions; [
+          github.copilot-chat
+          jnoortheen.nix-ide
+          pkief.material-icon-theme
+          usernamehw.errorlens
+          christian-kohler.path-intellisense
+          zhuangtongfa.material-theme
+          golang.go
+        ];
+
+        # Settings
+        userSettings = {
+          "editor.fontSize" = 18;
+          "files.autoSave" = "onFocusChange";
+          "editor.fontFamily" = "'Maple Mono NF CN', monospace";
+          "workbench.colorTheme" = "One Dark Pro";
+          "workbench.iconTheme" = "material-icon-theme";
+        };
+      };
     };
   };
 }
