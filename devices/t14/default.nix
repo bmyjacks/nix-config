@@ -36,12 +36,12 @@
       gpg.enable = true;
       locale.enable = true;
       localsend.enable = true;
+      neovim.enable = true;
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
       tlp.enable = true;
       tmpUseTmpfs.enable = true;
-      vscode.enable = true;
       zram.enable = true;
       zsh.enable = true;
     };
@@ -56,6 +56,7 @@
       htop
       btop
       compsize
+      gcc
     ];
 
     system.stateVersion = "25.11";

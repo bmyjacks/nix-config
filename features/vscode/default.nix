@@ -27,6 +27,7 @@ in
           christian-kohler.path-intellisense
           zhuangtongfa.material-theme
           golang.go
+          # mkhl.direnv
         ];
 
         # Settings
