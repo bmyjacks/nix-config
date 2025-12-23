@@ -36,6 +36,7 @@ in
 
         shellAliases = {
           ll = "ls -alh";
+          update = "nix flake update";
         };
 
         history.size = 10000;
