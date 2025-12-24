@@ -25,6 +25,16 @@ require("lualine").setup({
 	options = {
 		theme = "onedark",
 	},
+	sections = {
+		lualine_x = {
+			function()
+				return os.getenv("DIRENV_DIFF") ~= nil and "inDIRenv" or ""
+			end,
+			"encoding",
+			"fileformat",
+			"filetype",
+		},
+	},
 })
 
 -- ========================================================================== --
@@ -137,14 +147,11 @@ cmp.setup({
 })
 
 -- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local servers = { "lua_ls", "nixd", "gopls" }
 
-vim.lsp.config("lua_ls", {
-	capabilities = capabilities,
-})
-vim.lsp.enable("lua_ls")
-
-vim.lsp.config("nixd", {
-	capabilities = capabilities,
-})
-vim.lsp.enable("nixd")
+for _, lsp in ipairs(servers) do
+	vim.lsp.config(lsp, {
+		capabilities = capabilities,
+	})
+	vim.lsp.enable(lsp)
+end

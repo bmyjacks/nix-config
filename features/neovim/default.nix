@@ -64,7 +64,8 @@ in
           luasnip
           cmp_luasnip
 
-          vim-nix
+          # direnv
+          direnv-vim
         ];
       };
     };
