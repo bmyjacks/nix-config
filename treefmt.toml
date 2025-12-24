@@ -65,3 +65,18 @@ excludes = []
 # Lower the number, the higher the precedence
 # Default is 0
 priority = 0
+
+[formatter.lua]
+# Command to execute
+command = "stylua"
+# Command-line arguments for the command
+options = []
+# Glob pattern of files to include
+includes = [ "*.lua" ]
+# Glob patterns of files to exclude
+excludes = []
+# Controls the order of application when multiple formatters match the same file
+# Lower the number, the higher the precedence
+# Default is 0
+priority = 0
+
