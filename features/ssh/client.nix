@@ -13,6 +13,8 @@ in
   options.custom.${featureName}.enable = lib.mkEnableOption "Enable ${featureName}";
 
   config = lib.mkIf cfg.enable {
+    services.gnome.gnome-keyring.enable = lib.mkForce false;
+
     environment.systemPackages = with pkgs; [
       ssh-askpass-fullscreen
       libfido2
@@ -23,7 +25,5 @@ in
       askPassword = "${pkgs.ssh-askpass-fullscreen}/bin/ssh-askpass-fullscreen";
       startAgent = true;
     };
-
-    services.gnome.gcr-ssh-agent.enable = false;
   };
 }
