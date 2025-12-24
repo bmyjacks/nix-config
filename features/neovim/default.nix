@@ -19,6 +19,7 @@ in
       home.packages = with pkgs; [
         lua-language-server
         nixd
+        stylua
         treefmt
 
         # Telescope
@@ -54,6 +55,14 @@ in
           telescope-fzf-native-nvim
 
           nvim-treesitter.withAllGrammars
+
+          # Completetion
+          cmp-nvim-lsp
+          cmp-buffer
+          cmp-path
+          nvim-cmp
+          luasnip
+          cmp_luasnip
 
           vim-nix
         ];

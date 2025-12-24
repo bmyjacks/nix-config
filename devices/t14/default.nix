@@ -46,12 +46,13 @@
       zsh.enable = true;
     };
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     networking.hostName = "t14";
     networking.networkmanager.enable = true;
     networking.hostId = "58095c8e";
 
     environment.systemPackages = with pkgs; [
-      vim
       wget
       htop
       btop
