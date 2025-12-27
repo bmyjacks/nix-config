@@ -40,8 +40,8 @@
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
-      tlp.enable = true;
       tmpUseTmpfs.enable = true;
+      yubioath.enable = true;
       zram.enable = true;
       zsh.enable = true;
     };

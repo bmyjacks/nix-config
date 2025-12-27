@@ -22,6 +22,7 @@
     ./tlp
     ./tmpUseTmpfs
     ./vscode
+    ./yubioath
     ./zram
     ./zsh
   ];
