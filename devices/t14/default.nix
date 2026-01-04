@@ -27,10 +27,10 @@
       email = "bmyjacks@outlook.com";
 
       # Enable features
+      chrome.enable = true;
       chrony.enable = true;
       cosmic.enable = true;
       devenvir.enable = true;
-      firefox.enable = true;
       fonts.enable = true;
       git.enable = true;
       gpg.enable = true;
@@ -40,6 +40,7 @@
       ssh-client.enable = true;
       systemd-boot.enable = true;
       tailscale.enable = true;
+      tlp.enable = true;
       tmpUseTmpfs.enable = true;
       yubioath.enable = true;
       zram.enable = true;
