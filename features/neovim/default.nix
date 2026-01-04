@@ -66,6 +66,9 @@ in
 
           # direnv
           direnv-vim
+
+          # Wakatime
+          vim-wakatime
         ];
       };
     };
