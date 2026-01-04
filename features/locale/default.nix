@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.custom.locale.enable {
     # Timezone control
-    time.timeZone = "America/Chicago";
+    time.timeZone = "Asia/Shanghai";
     time.hardwareClockInLocalTime = false;
 
     # Select internationalisation properties.
