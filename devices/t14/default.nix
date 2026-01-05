@@ -42,6 +42,7 @@
       tailscale.enable = true;
       tlp.enable = true;
       tmpUseTmpfs.enable = true;
+      winbox.enable = true;
       yubioath.enable = true;
       zram.enable = true;
       zsh.enable = true;

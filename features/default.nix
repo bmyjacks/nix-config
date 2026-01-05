@@ -22,6 +22,7 @@
     ./tlp
     ./tmpUseTmpfs
     ./vscode
+    ./winbox
     ./yubioath
     ./zram
     ./zsh
