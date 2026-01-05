@@ -27,6 +27,7 @@
       email = "bmyjacks@outlook.com";
 
       # Enable features
+      cherrystudio.enable = true;
       chrome.enable = true;
       chrony.enable = true;
       cosmic.enable = true;

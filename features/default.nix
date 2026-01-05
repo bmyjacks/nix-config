@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./cherrystudio
     ./chrome
     ./chrony
     ./cosmic
