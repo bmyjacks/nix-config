@@ -27,12 +27,7 @@ in
         home.username = "bmyjacks";
         home.homeDirectory = "/home/bmyjacks";
 
-        home.stateVersion = "25.05";
-
-        home.packages = with pkgs; [
-          nixfmt-rfc-style
-          nixd
-        ];
+        home.stateVersion = "25.11";
       };
     };
   };
