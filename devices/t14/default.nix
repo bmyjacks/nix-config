@@ -27,7 +27,6 @@
       email = "bmyjacks@outlook.com";
 
       # Enable features
-      cherrystudio.enable = true;
       chrome.enable = true;
       chrony.enable = true;
       cosmic.enable = true;
@@ -61,6 +60,8 @@
       btop
       compsize
       gcc
+      tree
+      treefmt
     ];
 
     system.stateVersion = "25.11";
