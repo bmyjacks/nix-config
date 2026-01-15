@@ -13,22 +13,23 @@ in
   config = lib.mkIf config.custom.vscode.enable {
     home-manager.users.${username}.programs.vscode = {
       enable = true;
+      package = pkgs.vscode-fhs;
       profiles.default = {
         # Disable update
-        enableUpdateCheck = false;
-        enableExtensionUpdateCheck = false;
+        #enableUpdateCheck = false;
+        #enableExtensionUpdateCheck = false;
 
         # Enable some useful extensions
-        extensions = with pkgs.vscode-extensions; [
-          github.copilot-chat
-          jnoortheen.nix-ide
-          pkief.material-icon-theme
-          usernamehw.errorlens
-          christian-kohler.path-intellisense
-          zhuangtongfa.material-theme
-          golang.go
-          # mkhl.direnv
-        ];
+        #extensions = with pkgs.vscode-extensions; [
+        #  github.copilot-chat
+        #  jnoortheen.nix-ide
+        #  pkief.material-icon-theme
+        #  usernamehw.errorlens
+        #  christian-kohler.path-intellisense
+        #  zhuangtongfa.material-theme
+        #  golang.go
+        # mkhl.direnv
+        #];
 
         # Settings
         userSettings = {

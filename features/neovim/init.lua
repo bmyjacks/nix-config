@@ -101,7 +101,7 @@ require("oil").setup()
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Treesitter
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
 	highlight = { enable = true },
 	indent = { enable = true }, -- This is the magic line for "smart" indents
 })

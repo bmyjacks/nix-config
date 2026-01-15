@@ -25,6 +25,8 @@ in
         # Telescope
         ripgrep
         fd
+
+        tree-sitter
       ];
 
       # Neovim config
@@ -54,6 +56,7 @@ in
           plenary-nvim
           telescope-fzf-native-nvim
 
+          # Parser
           nvim-treesitter.withAllGrammars
 
           # Completetion
